@@ -1,0 +1,12 @@
+.vs
+.vscode
+.idea
+.git
+**/node_modules/
+**/package-lock.json
+**/public/build
+**/bin/
+**/obj/
+*.csproj.user
+*.pubxml.user
+*.DotSettings.user
