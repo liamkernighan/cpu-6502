@@ -5,12 +5,15 @@ namespace Emulator6502;
 
 public static class ServiceCollectionExtensions
 {
-    public IHost CreateHost(string[] args)
+    public static IHost CreateHost(this string[] args)
     {
         var builder = Host.CreateApplicationBuilder(args);
 
         var services = builder.Services;
         services.AddSingleton<Cpu>();
         services.AddSingleton<Memory>();
+        services.AddSingleton<Circuit>();
+
+        return builder.Build();
     }
 }
